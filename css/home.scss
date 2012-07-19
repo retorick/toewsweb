@@ -1,0 +1,146 @@
+/* For home page*/
+
+@import "variables";
+
+/*
+    This section is for making the tabbed areas on the home page.
+    The actual tab shape above each rectangular box is a PNG image placed using the :before pseudo-element.
+*/
+$color-home-border-a: #ffd76e;
+$color-home-border-b: #909855;
+$color-home-border-c: #9999cc;
+$color-home-border-d: #656e85;
+$color-home-border-e: #ff9900;
+$color-home-border-f: #3db4b4;
+
+$tab-width:200px;
+$tab-height:30px;
+
+/*
+    Tabbed box mixin:  Accepts two parameters:
+    $color: for borders and backgrounds
+    $ltr: indicates PNG tab image that matches the color
+*/
+@mixin tabbed-box($color, $ltr) {
+    position:relative;
+    width:$right-content-width - 2;
+    border:1px solid #{$color};
+    background: #{$color};
+    margin-top:75px;
+    border-radius:5px;
+    min-height:150px;
+    &:before {
+        content: " ";
+        position:absolute;
+        top:-1 * $tab-height - 1;
+        left:10px;
+        width:$right-content-width - 70;
+        height:$tab-height;
+        display:block;
+        padding:10px 22px;
+        font:16px verdana, sans-serif;
+        color:white;
+        text-shadow:1px 1px 0 #333;
+        background:url(/smarty/images/tab_#{$ltr}.png) no-repeat top right;
+        background-size:$tab-width $tab-height;
+    }
+}
+
+.tab-label {
+    position:absolute;
+    width:$tab-width;
+    top:-1*$tab-height + 10;
+    font:16px verdana, sans-serif;
+    color:darken(#fff,10%);
+    text-shadow:1px 1px 0 #000;
+}
+.tab-content {
+    padding:10px;
+    color:darken(#909855,20);
+}
+
+/*
+    Enough with the general stuff for making the tabbed boxes; here are the instances.
+    Recent Blogs, Code Samples, and Portfolio Highlights.
+    This illustrates something really cool about SCSS mixins:
+    There are several tab box colors to choose from, and it would be really nice to
+    be able to select a different color without having to worry about each property
+    and the background image.  Well, since mixins take arguments, all I have to do
+    is set the arguments in the @include for the specific tabbed box I want to make.
+    The mixin tabbed-box takes two arguments:  a color, and a tab image suffix, which
+    is a single letter.  The colors are stored in variables ending with the letter that 
+    matches the image, so I just change the letter on the end of the color variable and
+    the letter in the second argument, and I'm done.
+*/
+#recent-blogs-box {
+    @include tabbed-box($color-home-border-b, b);
+    margin-top:0;
+    .tab-label {
+        text-align:right;
+        padding-right:60px;
+        right:0;
+    }
+}
+
+$term-width:150px;
+$def-width:400px;
+#code-samples-box {
+    @include tabbed-box($color-home-border-a, a);
+    &:before {
+        background-position: top center;
+    }
+    .tab-label {
+        text-align:center;
+        margin:0 auto;
+        position:relative;
+    }
+    #exhibits {
+
+        dt {
+            position:relative;
+            margin-top:10px;
+            display:block;
+            width:$term-width;
+            clear:left;
+            float:left;
+            color:#ff9900;
+            &:hover {
+                cursor:pointer;
+            }
+            a, a:visited {
+                color:#f90;
+            }
+        }
+
+        dd {
+            display:block;
+            width:$def-width;
+            margin:10px 0 0 0;
+            padding:0;
+            float:left;
+            & > div {
+                padding:10px;
+                background:rgba(224,224,224,.3);
+                border-radius:5px;
+            }
+        }
+    }
+}
+
+#portfolio-highlights-box {
+    @include tabbed-box($color-home-border-d, d);
+    &:before {
+        background-position: top left;
+    }
+    .tab-label {
+        padding-left:32px;
+    }
+    .portfolio-item {
+        float:left;
+        width:129px;
+        img {
+            box-shadow:1px 1px 2px black;
+            width:100px;
+        }
+    }
+}

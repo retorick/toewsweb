@@ -1,0 +1,212 @@
+@import "variables";
+
+body { 
+    background:$body-background; 
+}
+
+h1 {
+    font:12pt arial, helvetica;
+    color:#9c9ccd;
+}
+h2 {
+    font:10pt arial, helvetica;
+    color:#616639;
+}
+
+a {
+    text-decoration:none;
+    color:$default-link;
+    &:hover {
+        color:$default-link-hover;
+    }
+    &:active {
+        color:$default-link-active;
+    }
+    &:visited {
+        color:$default-link-visited;
+    }
+}
+
+#nav-container {
+    position:relative;
+    width:$right-col-width;
+    height:39px;
+    background:url(/smarty/images/nav_bg.jpg) no-repeat;
+}
+/* Nav Bar */
+ul.nav {
+    position:absolute;
+    top:12px;
+    left:0;
+    margin:0;
+    padding:0 0 0 10px;
+    border-top:1px solid $color-nav-border;
+    border-bottom:1px solid $color-nav-border;
+    background:$color-nav-background;
+    & > li {
+        position:relative;
+        list-style-type:none;
+        display:block;
+        float:left;
+        padding-right:10px;
+        font:14px sans-serif,tahoma,verdana,helvetica,arial;
+        &:hover ul {
+            display:block;
+        }
+        & > a {
+            color:$color-top-nav-text;
+            &:hover { color:$color-top-nav-text-hover; }
+        }
+    }
+
+    ul {
+        display:none;
+        position:absolute;
+        z-index:10;
+        margin:0 0 0 10px;
+        padding:0;
+        background:white;
+        border:1px solid #84895f;
+        border-radius:3px;
+        box-shadow:1px 1px 2px black;
+        width:100px;
+    }
+    ul > li {
+        list-style-type:none;
+        display:block;
+        padding:3px 5px;
+        a {
+            display:block;
+            width:100%;
+            height:100%;
+            color:#586879;
+        }
+        &:hover a {
+            color:#3db4b4;
+        }
+        &:not(:first-child) {
+            border-top:1px solid #e1e5c2;
+        }
+    }
+}
+
+#page_container { 
+    margin:0 auto;
+    width:$page-width; 
+    text-align:left; 
+    background:#656e85;
+}
+
+#left_col {
+    width:$left-col-width;
+    min-height:349px;
+    float:left;
+    img:first-child {
+        border-bottom:1px solid $left-bottom-border;
+    }
+}
+#sidebar {
+    color: #ccc;
+    font: 12px verdana,arial,helvetica;
+    padding: 0 10px;
+    h2 {
+        color:#ffd76e;
+        text-shadow:1px 1px 0px darken(#656e85,10%);
+    }
+    a {
+        text-shadow:1px 1px 0px darken(#656e85,10%);
+    }
+}
+
+#right_col {
+    float:left;
+    #content-wrap {
+        width:$right-col-width;
+        min-height:353px;
+        background:url(/smarty/images/content_bg.jpg) no-repeat;
+    }
+    #content {
+        margin:auto; 
+        width:$right-col-width - $right-margin-width*2; 
+        color:#656e85; 
+        font:8pt verdana;
+        line-height:150%;
+        padding-top:30px;
+        /* To keep the ancestor div and its previous sibling together. */
+        p:first-child {
+            margin-top:0;
+        }
+    }
+}
+    
+code {
+    white-space: pre-wrap;
+    br {
+        display:none;
+    }
+}
+
+blockquote {
+    background:#eee;
+    border:1px solid #ccc;
+    border-radius:3px;
+    padding:5px;
+}
+
+@mixin deco-square {
+    position:absolute;
+    top:0;
+    display:block;
+    width:8px;
+    height:8px;
+}
+
+#title-container {
+    position:relative;
+    width:$right-col-width;
+    height:58px;
+    background:url(/smarty/images/header_bg2.png) no-repeat;
+    h1 {
+        display:block;
+        position:absolute;
+        top:9px;
+        left:47px;
+        margin:0;
+        padding:0;
+        font:bold 27px "Century Gothic","Avant Garde Gothic","Avant Garde", arial, helvetica;
+        text-shadow:1px 1px 2px #333;
+        letter-spacing:3px;
+        color:$color-page-title;
+    }
+}
+
+#copyright { 
+    margin-left: auto; 
+    margin-right: auto; 
+    padding-top:18px;
+    width: $page-width; 
+    clear:both;
+    text-align:center; 
+    font: $copyright-font;
+    color: $copyright-color;
+}
+
+#page_footer {
+  background:url(/smarty/images/page_bg.png);
+}
+
+
+/* For book notes pages */
+
+.javascript_code {
+    font-family:courier;
+    font-size:8pt;
+    white-space:pre-wrap;
+    padding:3px;
+    border:1px #ccc solid;
+}
+
+.javascript_inline {
+    font-family:courier;
+    font-size:8pt;
+}

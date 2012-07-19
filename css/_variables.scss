@@ -1,0 +1,24 @@
+/*
+    Variables intended to be available to all style sheets.
+*/
+
+$page-width:960px;
+$left-col-width:190px;
+$right-col-width: $page-width - $left-col-width;
+$right-margin-width: 50px;
+$right-content-width: $right-col-width - 2*$right-margin-width;
+$body-background: black;
+$color-top-nav-text: lighten(#909855,10%);
+$color-top-nav-text-hover: lighten($color-top-nav-text, 10%);
+$color-nav-border: #737c93;
+$color-nav-background: rgba(115,124,147,.3);
+$color-page-title: #f90;
+$default-link: #a4a877;
+$default-link-hover: #d0d87b;
+$default-link-active: #565c2f;
+$default-link-visited: #3a4664;
+$left-bottom-border: #909855;
+
+$copyright-font: 7pt trebuchet;
+$copyright-color: #986;
+

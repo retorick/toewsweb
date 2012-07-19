@@ -1,0 +1,34 @@
+/*
+    Exhibits are listed using the DL/DT/DD tags.
+*/
+#exhibits {
+
+    dt {
+        position:relative;
+        margin-top:10px;
+        display:block;
+        width:$term-width;
+        clear:left;
+        float:left;
+        color:#ff9900;
+        &:hover {
+            cursor:pointer;
+        }
+        a, a:visited {
+            color:#f90;
+        }
+    }
+
+    dd {
+        display:block;
+        width:$def-width;
+        margin:10px 0 0 0;
+        padding:0;
+        float:left;
+        & > div {
+            padding:10px;
+            background:rgba(224,224,224,.3);
+            border-radius:5px;
+        }
+    }
+}

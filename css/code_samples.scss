@@ -1,0 +1,9 @@
+/* For code samples page */
+
+@import "variables";
+
+$term-width:150px;
+$def-width:$right-content-width - $term-width;
+
+@import "code_exhibits";
+

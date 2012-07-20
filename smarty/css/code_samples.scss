@@ -1,0 +1,46 @@
+/* For code samples page */
+
+$page-width:960px;
+$left-col-width:190px;
+$right-col-width: $page-width - $left-col-width;
+$right-margin-width: 50px;
+$right-content-width: $right-col-width - 2*$right-margin-width;
+
+$term-width:150px;
+$def-width:$right-content-width - $term-width;
+
+/*
+    Exhibits are listed using the DL/DT/DD tags.
+*/
+#exhibits {
+
+    dt {
+        position:relative;
+        margin-top:10px;
+        display:block;
+        width:$term-width;
+        clear:left;
+        float:left;
+        color:#ff9900;
+        &:hover {
+            cursor:pointer;
+        }
+        a, a:visited {
+            color:#f90;
+        }
+    }
+
+    dd {
+        display:block;
+        width:$def-width;
+        margin:10px 0 0 0;
+        padding:0;
+        float:left;
+        & > div {
+            padding:10px;
+            background:rgba(224,224,224,.3);
+            border-radius:5px;
+        }
+    }
+
+}

@@ -1,7 +1,8 @@
 {extends file="smarty/toewsweb.tpl"}
 
 {block name=content}
-            <div class="portfolio_container">
+<script type="text/javascript" src="./js/code_samples.js"></script>
+            <div class="portfolio-container">
 {foreach $portfolio as $item}
   {if $item.category != $lastcat}
     {$lastcat = $item.category}
@@ -9,17 +10,26 @@
                     <span class="category_name">{$item.category}</span>.  <span class="category_description">{$item.description}</span>
                 </div>
   {/if}
-                <div class="portfolio_item" data-link="{$item.url}">
+                <div class="portfolio-item" data-link="{$item.url}">
   {if $item.thumb_file}
-                    <div class="portfolio_thumb">
-                        <img src="{$item.thumb_file}" width="100" border="0"/>
+                    <div class="portfolio-thumb">
+                        <a href="{$item.link}"><img src="{$item.thumb_file}" width="100" border="0"/></a>
                     </div>
   {/if}
-                    <div class="portfolio_entry">
-                        {$item.entry}
+                    <div class="portfolio-entry">
+                        <a href="{$item.link}">{$item.title}</a>. {$item.entry}
                     </div>
                     <br style="clear:both; height:0px"/>
                 </div>
 {/foreach}
             </div>
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".portfolio-item a").click(function() { 
+        CS.openSample(this.href);
+        return false; 
+    });
+    
+});
+</script>
 {/block}

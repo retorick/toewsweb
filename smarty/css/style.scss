@@ -1,8 +1,21 @@
-@import "variables";
+$copyright-font: 7pt trebuchet;
+$copyright-color: #986;
+$page-width:960px;
+$left-col-width:190px;
+$right-col-width: $page-width - $left-col-width;
+$right-margin-width: 50px;
+$body-background: black;
+$color-top-nav-text: lighten(#909855,10%);
+$color-top-nav-text-hover: lighten($color-top-nav-text, 10%);
+$color-nav-border: #737c93;
+$color-nav-background: rgba(115,124,147,.3);
+$color-page-title: #f90;
+$default-link: #a4a877;
+$default-link-hover: #d0d87b;
+$default-link-active: #565c2f;
+$default-link-visited: #3a4664;
+$left-bottom-border: #909855;
 
-html, body {
-    height:100%;
-}
 body { 
     background:$body-background; 
 }
@@ -34,12 +47,7 @@ a {
     position:relative;
     width:$right-col-width;
     height:39px;
-    background:url(#{$images}/nav_bg.jpg) no-repeat;
-    #site-title {
-        position:absolute;
-        top:11px;
-        left:463px;
-    }
+    background:url(/smarty/images/nav_bg.jpg) no-repeat;
 }
 /* Nav Bar */
 ul.nav {
@@ -63,7 +71,6 @@ ul.nav {
         }
         & > a {
             color:$color-top-nav-text;
-            text-shadow: 1px 1px 0px #000;
             &:hover { color:$color-top-nav-text-hover; }
         }
     }
@@ -99,23 +106,11 @@ ul.nav {
     }
 }
 
-$sledgehammer-column-padding: 1000px;
 #page_container { 
     margin:0 auto;
     width:$page-width; 
     text-align:left; 
     background:#656e85;
-    /* 
-       Uniform and sufficient column height:
-       overflow:hidden on parent div;
-       very large padding-bottom;
-       margin-bottom set to -1 * padding bottom;
-    */
-    overflow:hidden;
-    & > div {
-        padding-bottom:$sledgehammer-column-padding;
-        margin-bottom:-1 * $sledgehammer-column-padding;
-    }
 }
 
 #left_col {
@@ -144,7 +139,7 @@ $sledgehammer-column-padding: 1000px;
     #content-wrap {
         width:$right-col-width;
         min-height:353px;
-        background:url(#{$images}/content_bg.jpg) no-repeat;
+        background:url(/smarty/images/content_bg.jpg) no-repeat;
     }
     #content {
         margin:auto; 
@@ -160,10 +155,6 @@ $sledgehammer-column-padding: 1000px;
     }
 }
     
-#page-footer {
-    background:url(#{$images}/page_bg.png);
-}
-
 code {
     white-space: pre-wrap;
     br {
@@ -190,7 +181,7 @@ blockquote {
     position:relative;
     width:$right-col-width;
     height:58px;
-    background:url(#{$images}/header_bg2.png) no-repeat;
+    background:url(/smarty/images/header_bg2.png) no-repeat;
     h1 {
         display:block;
         position:absolute;
@@ -206,13 +197,18 @@ blockquote {
 }
 
 #copyright { 
-    margin:0 auto;
-    width:$page-width;
-    padding:8px;
+    margin-left: auto; 
+    margin-right: auto; 
+    padding-top:18px;
+    width: $page-width; 
     clear:both;
-    text-align:right; 
+    text-align:center; 
     font: $copyright-font;
     color: $copyright-color;
+}
+
+#page_footer {
+  background:url(/smarty/images/page_bg.png);
 }
 
 

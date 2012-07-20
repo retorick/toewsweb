@@ -1,6 +1,7 @@
 /* For home page*/
 
 @import "variables";
+@import "code_exhibits";
 
 /*
     This section is for making the tabbed areas on the home page.
@@ -15,6 +16,9 @@ $color-home-border-f: #3db4b4;
 
 $tab-width:200px;
 $tab-height:30px;
+$tab-box-width:$right-content-width - 2;
+$tab-box-padding:10px;
+$tab-box-content-width:$tab-box-width - 2*$tab-box-padding;
 
 /*
     Tabbed box mixin:  Accepts two parameters:
@@ -23,14 +27,14 @@ $tab-height:30px;
 */
 @mixin tabbed-box($color, $ltr) {
     position:relative;
-    width:$right-content-width - 2;
+    width:$tab-box-width;
     border:1px solid #{$color};
     background: #{$color};
     margin-top:75px;
     border-radius:5px;
     min-height:150px;
     &:before {
-        content: " ";
+        content: "";
         position:absolute;
         top:-1 * $tab-height - 1;
         left:10px;
@@ -41,7 +45,7 @@ $tab-height:30px;
         font:16px verdana, sans-serif;
         color:white;
         text-shadow:1px 1px 0 #333;
-        background:url(/smarty/images/tab_#{$ltr}.png) no-repeat top right;
+        background:url(#{$images}/tab_#{$ltr}.png) no-repeat top right;
         background-size:$tab-width $tab-height;
     }
 }
@@ -55,7 +59,7 @@ $tab-height:30px;
     text-shadow:1px 1px 0 #000;
 }
 .tab-content {
-    padding:10px;
+    padding:$tab-box-padding;
     color:darken(#909855,20);
 }
 
@@ -80,12 +84,19 @@ $tab-height:30px;
         padding-right:60px;
         right:0;
     }
+    .tab-content {
+        color:darken(white, 10%);
+        strong {
+            color:white;
+        }
+    }
 }
 
-$term-width:150px;
-$def-width:400px;
+$code-term-width:150px;
+$desc-width:$tab-box-content-width - $code-term-width;
+$desc-bg-color:transparent;
 #code-samples-box {
-    @include tabbed-box($color-home-border-a, a);
+    @include tabbed-box($color-home-border-d, d);
     &:before {
         background-position: top center;
     }
@@ -94,53 +105,37 @@ $def-width:400px;
         margin:0 auto;
         position:relative;
     }
+    .tab-content {
+        color:darken(white, 10%);
+    }
     #exhibits {
-
-        dt {
-            position:relative;
-            margin-top:10px;
-            display:block;
-            width:$term-width;
-            clear:left;
-            float:left;
-            color:#ff9900;
-            &:hover {
-                cursor:pointer;
-            }
-            a, a:visited {
-                color:#f90;
-            }
-        }
-
-        dd {
-            display:block;
-            width:$def-width;
-            margin:10px 0 0 0;
-            padding:0;
-            float:left;
-            & > div {
-                padding:10px;
-                background:rgba(224,224,224,.3);
-                border-radius:5px;
-            }
-        }
+        @include code_samples($code-term-width, $desc-width, $desc-bg-color);
     }
 }
 
 #portfolio-highlights-box {
     @include tabbed-box($color-home-border-d, d);
+    margin-top:0;
     &:before {
         background-position: top left;
     }
     .tab-label {
         padding-left:32px;
     }
+    .tab-content {
+        color:darken(white, 10%);
+    }
     .portfolio-item {
+            margin-top:10px;
         float:left;
-        width:129px;
+        width:160px;
+        text-align:center;
         img {
-            box-shadow:1px 1px 2px black;
+            box-shadow:2px 2px 3px black;
             width:100px;
+        }
+        p:first-child {
+            height:90px;
         }
     }
 }

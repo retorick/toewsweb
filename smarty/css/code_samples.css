@@ -1,0 +1,26 @@
+/* For code samples page */
+/*
+    Exhibits are listed using the DL/DT/DD tags.
+*/
+#exhibits dt {
+  position: relative;
+  margin-top: 10px;
+  display: block;
+  width: 150px;
+  clear: left;
+  float: left;
+  color: #ff9900; }
+  #exhibits dt:hover {
+    cursor: pointer; }
+  #exhibits dt a, #exhibits dt a:visited {
+    color: #f90; }
+#exhibits dd {
+  display: block;
+  width: 520px;
+  margin: 10px 0 0 0;
+  padding: 0;
+  float: left; }
+  #exhibits dd > div {
+    padding: 10px;
+    background: rgba(224, 224, 224, 0.3);
+    border-radius: 5px; }

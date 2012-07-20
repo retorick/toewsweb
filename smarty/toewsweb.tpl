@@ -21,6 +21,7 @@
 <!-- Left column : begin -->
   <div id="left_col">
     <img src="./smarty/images/int_{$pic}.jpg" />
+    {$sidebar}
   </div>
   <!-- Left column : end -->
 
@@ -28,19 +29,13 @@
   <div id="right_col">
 
     <div id="nav-container">
+      <div id="site-title"><img src="./smarty/images/title.png"/></div>
       <ul class="nav">
         <li><a href="/">Home</a><li>
         <li><a href="/portfolio.php">Portfolio</a></li>
         <li><a href="/code.php">Samples</a></li>
         <li><a href="/bookshelf.php">Bookshelf</a></li>
-        <li><a href="/blog">Blog</a>
-          <ul>
-            <li><a href="#">Item 1</a></li>
-            <li><a href="#">Item 2</a></li>
-            <li><a href="#">Item 3</a></li>
-            <li><a href="#">Item 4</a></li>
-          </ul>
-        </li>
+        <li><a href="/blog">Blog</a></li>
       </ul>
     </div>
 
@@ -58,10 +53,14 @@
   </div>
   <!-- Right column : end -->
 
-  <div id="page_footer">&nbsp;</div>
+  <div id="page-footer">&nbsp;</div>
 
 </div>
 <!-- Page container: end -->
+
+<div id="copyright">
+<a href="mailto:rick@toewsweb.net">rick@toewsweb.net</a>
+</div>
 
 </body>
 </html>

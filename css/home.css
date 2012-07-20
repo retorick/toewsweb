@@ -1,0 +1,198 @@
+/* For home page*/
+/*
+    Variables intended to be available to all style sheets.
+*/
+/*
+    Exhibits are listed using the DL/DT/DD tags.
+*/
+/*
+    dt {
+        position:relative;
+        margin-top:10px;
+        display:block;
+        width:$term-width;
+        clear:left;
+        float:left;
+        color:#ff9900;
+        &:hover {
+            cursor:pointer;
+        }
+        a, a:visited {
+            color:#f90;
+        }
+    }
+
+    dd {
+        display:block;
+        width:$def-width;
+        margin:10px 0 0 0;
+        padding:0;
+        float:left;
+        & > div {
+            padding:10px;
+            background:rgba(224,224,224,.3);
+            border-radius:5px;
+        }
+    }
+*/
+/*
+    This section is for making the tabbed areas on the home page.
+    The actual tab shape above each rectangular box is a PNG image placed using the :before pseudo-element.
+*/
+/*
+    Tabbed box mixin:  Accepts two parameters:
+    $color: for borders and backgrounds
+    $ltr: indicates PNG tab image that matches the color
+*/
+.tab-label {
+  position: absolute;
+  width: 200px;
+  top: -20px;
+  font: 16px verdana, sans-serif;
+  color: #e6e6e6;
+  text-shadow: 1px 1px 0 #000; }
+
+.tab-content {
+  padding: 10px;
+  color: #525730; }
+
+/*
+    Enough with the general stuff for making the tabbed boxes; here are the instances.
+    Recent Blogs, Code Samples, and Portfolio Highlights.
+    This illustrates something really cool about SCSS mixins:
+    There are several tab box colors to choose from, and it would be really nice to
+    be able to select a different color without having to worry about each property
+    and the background image.  Well, since mixins take arguments, all I have to do
+    is set the arguments in the @include for the specific tabbed box I want to make.
+    The mixin tabbed-box takes two arguments:  a color, and a tab image suffix, which
+    is a single letter.  The colors are stored in variables ending with the letter that 
+    matches the image, so I just change the letter on the end of the color variable and
+    the letter in the second argument, and I'm done.
+*/
+#recent-blogs-box {
+  position: relative;
+  width: 668px;
+  border: 1px solid #909855;
+  background: #909855;
+  margin-top: 75px;
+  border-radius: 5px;
+  min-height: 150px;
+  margin-top: 0; }
+  #recent-blogs-box:before {
+    content: "";
+    position: absolute;
+    top: -31px;
+    left: 10px;
+    width: 600px;
+    height: 30px;
+    display: block;
+    padding: 10px 22px;
+    font: 16px verdana, sans-serif;
+    color: white;
+    text-shadow: 1px 1px 0 #333;
+    background: url(/images/tab_b.png) no-repeat top right;
+    background-size: 200px 30px; }
+  #recent-blogs-box .tab-label {
+    text-align: right;
+    padding-right: 60px;
+    right: 0; }
+  #recent-blogs-box .tab-content {
+    color: #e6e6e6; }
+    #recent-blogs-box .tab-content strong {
+      color: white; }
+
+#code-samples-box {
+  position: relative;
+  width: 668px;
+  border: 1px solid #656e85;
+  background: #656e85;
+  margin-top: 75px;
+  border-radius: 5px;
+  min-height: 150px; }
+  #code-samples-box:before {
+    content: "";
+    position: absolute;
+    top: -31px;
+    left: 10px;
+    width: 600px;
+    height: 30px;
+    display: block;
+    padding: 10px 22px;
+    font: 16px verdana, sans-serif;
+    color: white;
+    text-shadow: 1px 1px 0 #333;
+    background: url(/images/tab_d.png) no-repeat top right;
+    background-size: 200px 30px; }
+  #code-samples-box:before {
+    background-position: top center; }
+  #code-samples-box .tab-label {
+    text-align: center;
+    margin: 0 auto;
+    position: relative; }
+  #code-samples-box .tab-content {
+    color: #e6e6e6; }
+  #code-samples-box #exhibits dt {
+    position: relative;
+    margin-top: 10px;
+    display: block;
+    width: 150px;
+    clear: left;
+    float: left;
+    font-weight: bold;
+    color: #cc7a00; }
+    #code-samples-box #exhibits dt:hover {
+      cursor: pointer; }
+    #code-samples-box #exhibits dt a, #code-samples-box #exhibits dt a:visited {
+      color: #ff9900; }
+  #code-samples-box #exhibits dd {
+    display: block;
+    width: 498px;
+    margin: 10px 0 0 0;
+    padding: 0;
+    float: left;
+    font-style: italic; }
+    #code-samples-box #exhibits dd > div {
+      padding: 0px;
+      background: transparent;
+      border-radius: 5px;
+      font-style: normal; }
+
+#portfolio-highlights-box {
+  position: relative;
+  width: 668px;
+  border: 1px solid #656e85;
+  background: #656e85;
+  margin-top: 75px;
+  border-radius: 5px;
+  min-height: 150px;
+  margin-top: 0; }
+  #portfolio-highlights-box:before {
+    content: "";
+    position: absolute;
+    top: -31px;
+    left: 10px;
+    width: 600px;
+    height: 30px;
+    display: block;
+    padding: 10px 22px;
+    font: 16px verdana, sans-serif;
+    color: white;
+    text-shadow: 1px 1px 0 #333;
+    background: url(/images/tab_d.png) no-repeat top right;
+    background-size: 200px 30px; }
+  #portfolio-highlights-box:before {
+    background-position: top left; }
+  #portfolio-highlights-box .tab-label {
+    padding-left: 32px; }
+  #portfolio-highlights-box .tab-content {
+    color: #e6e6e6; }
+  #portfolio-highlights-box .portfolio-item {
+    margin-top: 10px;
+    float: left;
+    width: 160px;
+    text-align: center; }
+    #portfolio-highlights-box .portfolio-item img {
+      box-shadow: 2px 2px 3px black;
+      width: 100px; }
+    #portfolio-highlights-box .portfolio-item p:first-child {
+      height: 90px; }

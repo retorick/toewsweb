@@ -1,0 +1,62 @@
+/* For code samples page */
+/*
+    Variables intended to be available to all style sheets.
+*/
+/*
+    Exhibits are listed using the DL/DT/DD tags.
+*/
+/*
+    dt {
+        position:relative;
+        margin-top:10px;
+        display:block;
+        width:$term-width;
+        clear:left;
+        float:left;
+        color:#ff9900;
+        &:hover {
+            cursor:pointer;
+        }
+        a, a:visited {
+            color:#f90;
+        }
+    }
+
+    dd {
+        display:block;
+        width:$def-width;
+        margin:10px 0 0 0;
+        padding:0;
+        float:left;
+        & > div {
+            padding:10px;
+            background:rgba(224,224,224,.3);
+            border-radius:5px;
+        }
+    }
+*/
+#exhibits dt {
+  position: relative;
+  margin-top: 10px;
+  display: block;
+  width: 150px;
+  clear: left;
+  float: left;
+  font-weight: bold;
+  color: #cc7a00; }
+  #exhibits dt:hover {
+    cursor: pointer; }
+  #exhibits dt a, #exhibits dt a:visited {
+    color: #ff9900; }
+#exhibits dd {
+  display: block;
+  width: 520px;
+  margin: 10px 0 0 0;
+  padding: 0;
+  float: left;
+  font-style: italic; }
+  #exhibits dd > div {
+    padding: 0px;
+    background: #eeeeee;
+    border-radius: 5px;
+    font-style: normal; }

@@ -1,8 +1,43 @@
 /*
     Exhibits are listed using the DL/DT/DD tags.
 */
-#exhibits {
+$term-color: #f90;
+@mixin code-samples($term-width, $def-width, $def-bg-color) {
+    dt {
+        position:relative;
+        margin-top:10px;
+        display:block;
+        width:$term-width;
+        clear:left;
+        float:left;
+        font-weight:bold;
+        color:darken($term-color,10);
+        &:hover {
+            cursor:pointer;
+        }
+        a, a:visited {
+            color:$term-color;
+        }
+    }
 
+    dd {
+        display:block;
+        width:$def-width;
+        margin:10px 0 0 0;
+        padding:0;
+        float:left;
+        font-style:italic;
+        & > div {
+            padding:0px;
+            background:$def-bg-color;
+            border-radius:5px;
+            font-style:normal;
+        }
+    }
+}
+
+
+/*
     dt {
         position:relative;
         margin-top:10px;
@@ -31,4 +66,4 @@
             border-radius:5px;
         }
     }
-}
+*/

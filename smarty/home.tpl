@@ -2,6 +2,7 @@
 {block name=content}
 <script type="text/javascript" src="./js/code_samples.js"></script>
 
+<!--
 <div id="recent-blogs-box">
   <div class="tab-label">Recent Blogs</div>
   <div class="tab-content">
@@ -9,6 +10,21 @@
     <p><strong>{$post.post_title}</strong> {$post.date}</p>
     <p>{$post.content}</p>
     {/foreach}
+  </div>
+</div>
+-->
+
+<div id="portfolio-highlights-box">
+  <div class="tab-label">Portfolio Highlights</div>
+  <div class="tab-content">
+    {foreach $portfolio_highlights as $item}
+    <div class="portfolio-item">
+      <!--<p>{$item.url}</p>-->
+      <p><a href="{$item.link}"><img src="{$item.thumb_file}"/></a></p>
+      <p>{$item.title}</p>
+    </div>
+    {/foreach}
+    <br style="clear:both"/>
   </div>
 </div>
 
@@ -30,18 +46,6 @@
       <br style="clear:both"/>
     </div>
 
-  </div>
-</div>
-
-<div id="portfolio-highlights-box">
-  <div class="tab-label">Portfolio Highlights</div>
-  <div class="tab-content">
-    {foreach $portfolio_highlights as $item}
-    <div class="portfolio-item">
-      <p>{$item.url}</p>
-      <a href="http://{$item.url}"><img src="{$item.thumb_file}"/></a>
-    </div>
-    {/foreach}
   </div>
 </div>
 

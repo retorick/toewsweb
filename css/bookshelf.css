@@ -1,0 +1,50 @@
+/*
+    Variables intended to be available to all style sheets.
+*/
+h2 {
+  z-index: 0;
+  margin-top: 0;
+  padding-top: 0; }
+
+.book_title {
+  position: relative; }
+
+.book_cover {
+  float: left;
+  width: 100px; }
+  .book_cover img {
+    box-shadow: 2px 2px 2px #000; }
+
+.book_info {
+  float: left;
+  width: 530px;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted black;
+  margin-bottom: 10px; }
+
+.booklist {
+  position: relative; }
+
+.thoughts {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 20px;
+  left: 0;
+  background: #f9f9f0;
+  padding: 25px;
+  border: 1px solid #ccc;
+  width: 580px;
+  height: 550px;
+  overflow-y: auto;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px #333; }
+
+.more {
+  cursor: pointer;
+  color: #cccc99; }
+
+.thoughts_masthead {
+  padding-bottom: 5px;
+  border-bottom: 1px dotted #cccc99;
+  margin-bottom: 10px; }

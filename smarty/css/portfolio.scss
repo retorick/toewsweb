@@ -1,10 +1,13 @@
-@import "variables";
-
+$page-width:960px;
+$left-col-width:190px;
+$right-col-width: $page-width - $left-col-width;
+$right-margin-width: 50px;
 $thumb-width:100px;
 $portfolio-entry-width: $right-col-width - $right-margin-width*2 - ($thumb-width + 40);
 
-.portfolio-container {
+.portfolio_container {
     line-height:150%;
+}
 .category_header {
     clear:left;
     background:rgba(101,110,133,.25);
@@ -15,7 +18,7 @@ $portfolio-entry-width: $right-col-width - $right-margin-width*2 - ($thumb-width
 .category_name {
     font-weight:bold;
 }
-.portfolio-item {
+.portfolio_item {
     position:relative;
     cursor:pointer;
     padding:5px;
@@ -27,7 +30,7 @@ $portfolio-entry-width: $right-col-width - $right-margin-width*2 - ($thumb-width
         border:1px solid rgba(101,110,133,.1);
     }
 }
-.portfolio-thumb {
+.portfolio_thumb {
     position:relative;
     width:$thumb-width;
     height:75px;
@@ -40,7 +43,7 @@ $portfolio-entry-width: $right-col-width - $right-margin-width*2 - ($thumb-width
         -moz-box-shadow:2px 2px 5px black;
     }
 }
-.portfolio-entry {
+.portfolio_entry {
     position:relative;
     float:left;
     margin-left:20px;
@@ -51,4 +54,3 @@ $portfolio-entry-width: $right-col-width - $right-margin-width*2 - ($thumb-width
     }
 }
 
-}

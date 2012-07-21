@@ -63,5 +63,21 @@
 <a href="mailto:rick@toewsweb.net">rick@toewsweb.net</a>
 </div>
 
+<div id="overlay">
+  <div id="outer_exhibit">
+    <div id="inner_exhibit">
+      <div id="close_exhibit"></div>
+      <iframe src="/exhibit.php?id=26"></iframe>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#close_exhibit').click(function() {
+        $('#overlay').hide();
+    });
+});
+</script>
 </body>
 </html>

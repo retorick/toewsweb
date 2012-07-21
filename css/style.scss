@@ -216,6 +216,47 @@ blockquote {
 }
 
 
+#overlay {
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.45);
+}
+$outer-exhibit-height:550px;
+#outer_exhibit {
+    position:absolute;
+    top: 50%;
+    margin-top:-1*$outer-exhibit-height / 2;
+    height:$outer-exhibit-height;
+    width:100%%;
+}
+#inner_exhibit {
+    width:95%;
+    margin:0 auto;
+    border:1px solid #666;
+    border-radius:10px;
+    background:rgba(0,0,0,.75);
+}
+#overlay iframe {
+    width:100%;
+    height:100%;
+    border:none;
+}
+$close-exhibit-width: 12px;
+#close_exhibit {
+    position:absolute;
+    right:36px;
+    top:6px;
+    width:$close-exhibit-width;
+    height:$close-exhibit-width;
+    background:red;
+    border-radius:5px;
+    cursor:pointer;
+}
+
 /* For book notes pages */
 
 .javascript_code {

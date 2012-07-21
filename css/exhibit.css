@@ -11,7 +11,7 @@ div.container {
   width: 70%; }
   .glass-case-wrapper iframe.glass-case {
     width: 100%;
-    height: 500px;
+    height: 550px;
     overflow: scroll;
     border: none; }
 
@@ -22,11 +22,12 @@ div.container {
     margin: 0 auto 20px;
     width: 80%;
     font: 20px verdana;
-    color: #656e85; }
+    color: #cccccc; }
   .description-wrapper > p {
     margin: 0 auto 20px;
     width: 80%;
-    font: bold 12px verdana; }
+    font: bold 12px verdana;
+    color: #999999; }
   .description-wrapper .description {
     width: 80%;
     margin: 0 auto;

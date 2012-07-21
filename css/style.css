@@ -188,10 +188,11 @@ blockquote {
   top: 50%;
   margin-top: -275px;
   height: 550px;
-  width: 100%%; }
+  width: 100%; }
 
 #inner_exhibit {
   width: 95%;
+  height: 100%;
   margin: 0 auto;
   border: 1px solid #666;
   border-radius: 10px;
@@ -204,8 +205,8 @@ blockquote {
 
 #close_exhibit {
   position: absolute;
-  right: 36px;
-  top: 6px;
+  right: 48px;
+  top: -24px;
   width: 12px;
   height: 12px;
   background: red;

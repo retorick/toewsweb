@@ -231,10 +231,11 @@ $outer-exhibit-height:550px;
     top: 50%;
     margin-top:-1*$outer-exhibit-height / 2;
     height:$outer-exhibit-height;
-    width:100%%;
+    width:100%;
 }
 #inner_exhibit {
     width:95%;
+    height:100%;
     margin:0 auto;
     border:1px solid #666;
     border-radius:10px;
@@ -248,8 +249,8 @@ $outer-exhibit-height:550px;
 $close-exhibit-width: 12px;
 #close_exhibit {
     position:absolute;
-    right:36px;
-    top:6px;
+    right:$close-exhibit-width * 4;
+    top:-1*$close-exhibit-width * 2;
     width:$close-exhibit-width;
     height:$close-exhibit-width;
     background:red;

@@ -67,7 +67,7 @@
   <div id="outer_exhibit">
     <div id="inner_exhibit">
       <div id="close_exhibit"></div>
-      <iframe src="/exhibit.php?id=26"></iframe>
+      <iframe id="exhibit_frame" src="/exhibit.php?id=26"></iframe>
     </div>
   </div>
 </div>
@@ -76,7 +76,14 @@
 $(document).ready(function() {
     $('#close_exhibit').click(function() {
         $('#overlay').hide();
+        var exhibit = document.getElementById('exhibit_frame').contentWindow.document.getElementById('exhibit');
+        $(exhibit).css('visibility', 'hidden');
+        
+        console.log('iframe info 1: ');
+        console.log(document.getElementById('exhibit_frame').contentWindow.document.getElementById('exhibit'));
+        console.log('iframe info 2: ' + $('#inner_exhibit > iframe').attr('contentWindow'));
     });
+
 });
 </script>
 </body>

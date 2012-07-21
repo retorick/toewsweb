@@ -13,7 +13,7 @@
                 <div class="portfolio-item" data-link="{$item.url}">
   {if $item.thumb_file}
                     <div class="portfolio-thumb">
-                        <a href="{$item.link}"><img src="{$item.thumb_file}" width="100" border="0"/></a>
+                        <a href="{$item.link}" data-id="{{$item.id}}"><img src="{$item.thumb_file}" width="100" border="0"/></a>
                     </div>
   {/if}
                     <div class="portfolio-entry">
@@ -26,7 +26,7 @@
 <script type="text/javascript">
 $(document).ready(function() {
     $(".portfolio-item a").click(function() { 
-        CS.openSample(this.href);
+        CS.openSample(this.href, $(this).attr('data-id'));
         return false; 
     });
     

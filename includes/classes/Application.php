@@ -1,8 +1,10 @@
 <?php
-define('WP_USE_THEMES', false);
-require_once('blog/wp-blog-header.php');
-require_once('Db.php');
-
+/**
+ * Application abstract class for toewsweb.net.
+ * Provides database connections and error handling required by other classes.
+ *
+ * @author Rick Toews <rick@toewsweb.net>
+ */
 abstract class Application {
     protected $_blog_conn;
     protected $_site_conn;

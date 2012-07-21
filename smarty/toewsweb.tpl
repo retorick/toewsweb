@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./css/code_samples.css"/>
   <link rel="stylesheet" href="./css/bookshelf.css"/>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/toewsweb.js"></script>
   <script type="text/javascript" src="./js/fix.js"></script>
 </head>
 <body>
@@ -20,7 +21,7 @@
 
 <!-- Left column : begin -->
   <div id="left_col">
-    <img src="./smarty/images/int_{$pic}.jpg" />
+    <img src="./images/int_{$pic}.jpg" />
     {$sidebar}
   </div>
   <!-- Left column : end -->
@@ -29,7 +30,7 @@
   <div id="right_col">
 
     <div id="nav-container">
-      <div id="site-title"><img src="./smarty/images/title.png"/></div>
+      <div id="site-title"><img src="./images/title.png"/></div>
       <ul class="nav">
         <li><a href="/">Home</a><li>
         <li><a href="/portfolio.php">Portfolio</a></li>

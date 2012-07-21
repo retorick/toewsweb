@@ -88,7 +88,7 @@ ul.nav {
   margin: 0 auto;
   width: 960px;
   text-align: left;
-  background: #656e85;
+  background: url(/images/page_bg.png);
   /* 
      Uniform and sufficient column height:
      overflow:hidden on parent div;

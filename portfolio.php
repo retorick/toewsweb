@@ -2,10 +2,12 @@
 require_once('layout.php');
 
 $portfolio = new PortfolioCollection();
+$portfolio->get_collection();
 $items = array();
 $lastcat = -1;
 $n = 0;
 foreach ($portfolio->entries as $p) {
+    $items[$n]['id'] = $p->id;
     $items[$n]['category'] = $p->pc_category;
     $items[$n]['description'] = $p->pc_description;
     $items[$n]['link'] = $p->link;

@@ -104,7 +104,7 @@ $sledgehammer-column-padding: 1000px;
     margin:0 auto;
     width:$page-width; 
     text-align:left; 
-    background:#656e85;
+    background:url(#{$images}/page_bg.png);
     /* 
        Uniform and sufficient column height:
        overflow:hidden on parent div;

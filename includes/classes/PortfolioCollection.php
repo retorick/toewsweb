@@ -34,6 +34,7 @@ class Portfolio extends Application {
     $this->pc_id = $data->pc_id;
     $this->pc_category = $data->pc_category;
     $this->pc_description = $data->pc_description;
+    $this->id = $data->p_id;
     $this->title = $data->p_title;
     $this->link = $data->p_link;
     $this->url = $data->p_url;
@@ -56,8 +57,15 @@ class Portfolio extends Application {
 }
 
 class PortfolioCollection extends Application {
-    function __construct() {
-        global $connect;
+    function __construct($id = 0) {
+        parent::__construct();
+
+        if ($id) {
+            $this->item = $this->get_portfolio_item($id);
+        }
+        else {
+        }
+/*
         $this->entries = array();
         $i = 0;
         $portfolio = array();
@@ -68,6 +76,21 @@ class PortfolioCollection extends Application {
         while ($row = mysql_fetch_object($result)) {
             $this->entries[] = new Portfolio($row);
         }
+*/
+    }
+
+    function get_portfolio_item($id)
+    {
+        global $connect;
+        $entry = null;
+        $sql = "SELECT * FROM site_portfolio, site_portfolio_categories " .
+               "WHERE p_categoryid=pc_id " .
+               "  AND p_id='$id' ";
+        $result = mysql_query($sql, $connect);
+        if ($row = mysql_fetch_object($result)) {
+            $entry = new Portfolio($row);
+        }
+        return $entry;
     }
 
     function get_collection()

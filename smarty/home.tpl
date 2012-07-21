@@ -19,8 +19,7 @@
   <div class="tab-content">
     {foreach $portfolio_highlights as $item}
     <div class="portfolio-item">
-      <!--<p>{$item.url}</p>-->
-      <p><a href="{$item.link}"><img src="{$item.thumb_file}"/></a></p>
+      <p><a href="{$item.link}" data-id="{$item.id}"><img src="{$item.thumb_file}"/></a></p>
       <p>{$item.title}</p>
     </div>
     {/foreach}
@@ -57,7 +56,7 @@ $(document).ready(function() {
     });
     
     $(".portfolio-item a").click(function() { 
-        CS.openSample(this.href);
+        CS.openSample(this.href, $(this).attr('data-id'));
         return false; 
     });
     

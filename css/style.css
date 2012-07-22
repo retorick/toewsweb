@@ -175,13 +175,17 @@ blockquote {
   color: #999999; }
 
 #overlay {
-  display: none;
+  display: block;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.45); }
+  #overlay iframe {
+    width: 100%;
+    height: 100%;
+    border: none; }
 
 #outer_exhibit {
   position: absolute;
@@ -197,21 +201,6 @@ blockquote {
   border: 1px solid #666;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.75); }
-
-#overlay iframe {
-  width: 100%;
-  height: 100%;
-  border: none; }
-
-#close_exhibit {
-  position: absolute;
-  right: 48px;
-  top: -24px;
-  width: 12px;
-  height: 12px;
-  background: red;
-  border-radius: 5px;
-  cursor: pointer; }
 
 /* For book notes pages */
 .javascript_code {

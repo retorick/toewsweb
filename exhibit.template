@@ -5,26 +5,36 @@
   <meta charset="UTF-8"/>
   <link rel="stylesheet" href="css/exhibit.css"/>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/exhibit.js"></script>
 </head>
 <body>
 <div class="container">
+  <div id="spinner"></div>
   <div class="glass-case-wrapper">
     <iframe id="exhibit" class="glass-case" src="%LINK%"></iframe>
   </div>
   <div class="description-wrapper">
+    <div id="close-wrapper">
+      <a href="#"><img src="images/exit.png" border="0"/></a>
+    </div>
     <h2>%TITLE%</h2>
-    <p>%URL%</p>
     <div class="description">
+      <p>%URL%</p>
       %DESC%
     </div>
   </div>
 </div>
 <script type="text/javascript">
-window.exhibitLoaded = false;
-$('iframe.glass-case').css('visibility', 'hidden');
-$('iframe').load(function() {
-    $('iframe.glass-case').css('visibility', 'visible');
-    window.exhibitLoaded = true;
+$(document).ready(function() {
+    $('#close-wrapper a').click(function() {
+        CS.closeExhibit();
+    });
+
+    $('iframe').load(function() {
+        var spinner = parent.window.$('#overlay .spinner');
+        $('.container div').show();
+        $(spinner).hide();
+    });
 });
 </script>
 </body>

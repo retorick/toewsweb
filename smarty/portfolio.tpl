@@ -1,7 +1,7 @@
 {extends file="smarty/toewsweb.tpl"}
 
 {block name=content}
-<script type="text/javascript" src="./js/code_samples.js"></script>
+<script type="text/javascript" src="./js/exhibit.js"></script>
             <div class="portfolio-container">
 {foreach $portfolio as $item}
   {if $item.category != $lastcat}

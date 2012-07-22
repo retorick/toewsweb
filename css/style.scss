@@ -216,16 +216,21 @@ blockquote {
 }
 
 
+$outer-exhibit-height:550px;
 #overlay {
-    display:none;
+    display:block;
     position:fixed;
     top:0;
     left:0;
     width:100%;
     height:100%;
     background:rgba(0,0,0,.45);
+    iframe {
+        width:100%;
+        height:100%;
+        border:none;
+    }
 }
-$outer-exhibit-height:550px;
 #outer_exhibit {
     position:absolute;
     top: 50%;
@@ -240,22 +245,6 @@ $outer-exhibit-height:550px;
     border:1px solid #666;
     border-radius:10px;
     background:rgba(0,0,0,.75);
-}
-#overlay iframe {
-    width:100%;
-    height:100%;
-    border:none;
-}
-$close-exhibit-width: 12px;
-#close_exhibit {
-    position:absolute;
-    right:$close-exhibit-width * 4;
-    top:-1*$close-exhibit-width * 2;
-    width:$close-exhibit-width;
-    height:$close-exhibit-width;
-    background:red;
-    border-radius:5px;
-    cursor:pointer;
 }
 
 /* For book notes pages */

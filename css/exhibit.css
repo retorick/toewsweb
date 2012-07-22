@@ -3,11 +3,13 @@ div.container {
   width: 100%;
   height: 100%; }
   div.container > div {
+    display: block;
     float: left;
     padding-bottom: 1000px;
     margin-bottom: -1000px; }
 
 .glass-case-wrapper {
+  position: relative;
   width: 70%; }
   .glass-case-wrapper iframe.glass-case {
     width: 100%;
@@ -16,18 +18,20 @@ div.container {
     border: none; }
 
 .description-wrapper {
+  position: relative;
   width: 30%; }
+  .description-wrapper #close-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent; }
   .description-wrapper h2 {
     display: block;
     margin: 0 auto 20px;
     width: 80%;
-    font: 20px verdana;
-    color: #cccccc; }
-  .description-wrapper > p {
-    margin: 0 auto 20px;
-    width: 80%;
-    font: bold 12px verdana;
-    color: #999999; }
+    font: 21px verdana;
+    color: #8089a0;
+    text-shadow: 1px 1px 1px black; }
   .description-wrapper .description {
     width: 80%;
     margin: 0 auto;
@@ -40,4 +44,6 @@ div.container {
     border: 1px solid #eee;
     border-radius: 10px; }
     .description-wrapper .description p:first-child {
-      margin-top: 0; }
+      margin-top: 0;
+      font: bold 12px verdana;
+      color: #d0d7e8; }

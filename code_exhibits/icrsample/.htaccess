@@ -1,0 +1,14 @@
+RewriteEngine On
+# Process URLs ending in .html
+RewriteCond %{REQUEST_URI} ^/[^/]+\.html$
+RewriteRule ([^.]+)\.html index.php?page=$1 [L]
+
+# Process URLs ending in a PHP session ID
+# The purpose of this condition is to prevent a PHP error from setting PHPSESSID to an invalid session ID value.
+RewriteCond %{REQUEST_URI} ^/[^/]+\.html/[-a-zA-Z0-9]+$
+RewriteRule ([^.]+)\.html/(.+) index.php?page=$1&PHPSESSID=$2 [L]
+
+# Process a URL that has an invalid session ID after the .html file name.  Probably no one would do this,
+# but then, who knows?
+RewriteCond %{REQUEST_URI} ^/[^/]+\.html/.+
+RewriteRule ([^.]+)\.html/(.+) index.php?page=$1 [L]

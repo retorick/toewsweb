@@ -1,0 +1,82 @@
+/* body content is centered; however, the "content" element is a block, within which the text is justified. */
+body { margin-left:auto; margin-right:auto; font-family:verdana, arial, helvetica; font-size:10pt; text-align:center; }
+a, a.visited, a.active { color:#ff9900; text-decoration:none; }
+#content { width:600px; margin-left:auto; margin-right:auto; text-align:justify; }
+
+#greeting { }
+
+#selectstyle { 
+    width:600px; 
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-left:auto; 
+    margin-right:auto; 
+    text-align:right; 
+    background-color:#cccccc; 
+    text-align:right; 
+    font-family:verdana; 
+    font-size:8pt; 
+}
+    #selectstyle select { font-size:8pt; }
+
+#topnavVert { display:none; }
+
+#topnavHoriz { 
+    text-align:center; 
+    margin-bottom:10px; 
+    padding-bottom:3px; 
+    border-bottom:1px black dotted; 
+    font-size:8pt; 
+}
+    #topnavHoriz a { text-decoration:none; color:#666666; }
+    #topnavHoriz a.visited { color:#999999; }
+    #topnavHoriz a.active { color:#999999; }
+    #topnavHoriz a:hover { text-decoration:underline; }
+
+#bottomnav { 
+    text-align:center; 
+    padding-top:3px; 
+    border-top:1px black 
+    dotted; font-size:8pt; 
+}
+    #bottomnav a { text-decoration:none; color:#666666; }
+    #bottomnav a.visited { color:#999999; }
+    #bottomnav a.active { color:#999999; }
+    #bottomnav a:hover { text-decoration:underline; }
+
+h1 { font-size:12pt; font-weight:bold; color:#0099ff;}
+p,li { margin-left:30px; line-height:150%; padding-bottom:6px; }
+
+/* Identification page */
+#intro {
+}
+    #intro p { margin-left:0px; }
+
+/* Heritage page */
+#heritage {
+}
+
+/* Tenets page */
+#research {
+}
+    #research div.section { }
+
+
+#philosophy {
+}
+    #philosophy div.section { }
+
+
+#tenetsScientific {
+}
+    #tenetsScientific div.bulletsection { }
+
+#tenetsBiblical {
+}
+    #tenetsBiblical div.bulletsection { }
+    #tenetsBiblical div.note { }
+
+#final {
+}
+    #final p { }
+

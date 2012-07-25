@@ -1,0 +1,154 @@
+body {
+  font: 12px verdana;
+  color: #333;
+  line-height: 150%; }
+
+#mm_container {
+  margin: auto;
+  width: 550px; }
+  #mm_container h1 {
+    text-align: center; }
+  #mm_container #controls {
+    width: 100%;
+    height: 40px; }
+  #mm_container p:nth-of-type(1) {
+    clear: both; }
+
+#centeredmenu {
+  float: left;
+  width: 100%;
+  background: transparent;
+  position: relative; }
+
+ul#colored-peg-wrapper {
+  clear: left;
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  text-align: center; }
+
+ul#colored-peg-wrapper li {
+  display: block;
+  float: left;
+  list-style: none;
+  position: relative;
+  right: 50%; }
+
+.colored_peg {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 8px;
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  float: left;
+  cursor: pointer; }
+
+#mycode {
+  /*   margin:auto; */
+  clear: both;
+  background: #cccccc;
+  background: rgba(192, 192, 192, 0.2);
+  border: 1px solid gray;
+  margin: auto;
+  width: 170px;
+  height: 25px; }
+
+.red {
+  width: 16px;
+  height: 16px;
+  background: red;
+  border-radius: 10px; }
+
+.orange {
+  width: 16px;
+  height: 16px;
+  background: orange;
+  border-radius: 10px; }
+
+.yellow {
+  width: 16px;
+  height: 16px;
+  background: yellow;
+  border-radius: 10px; }
+
+.green {
+  width: 16px;
+  height: 16px;
+  background: green;
+  border-radius: 10px; }
+
+.blue {
+  width: 16px;
+  height: 16px;
+  background: blue;
+  border-radius: 10px; }
+
+.purple {
+  width: 16px;
+  height: 16px;
+  background: purple;
+  border-radius: 10px; }
+
+.pegs {
+  margin: 7px;
+  height: 16px;
+  width: 16px;
+  float: left;
+  background-image: url(./mastermind/colored_pegs.png);
+  background-repeat: no-repeat; }
+
+.guess {
+  padding-top: 2px;
+  padding-left: 2px;
+  width: 170px;
+  height: 32px;
+  display: none; }
+
+.scorecard {
+  padding-top: 4px;
+  float: right;
+  width: 27px;
+  height: 30px;
+  display: inherit; }
+
+#score_pegs {
+  float: right;
+  width: 70px;
+  height: 6px;
+  cursor: pointer; }
+
+.black_peg {
+  float: left;
+  margin: 2px;
+  width: 6px;
+  height: 6px;
+  background: url(./mastermind/score_pegs.png) no-repeat 0px; }
+
+.white_peg {
+  float: left;
+  margin: 2px;
+  width: 6px;
+  height: 6px;
+  background: url(./mastermind/score_pegs.png) no-repeat -6px; }
+
+#black {
+  margin: 2px;
+  width: 16px;
+  height: 16px;
+  float: left;
+  background: url(./mastermind/score_pegs_controls.png) no-repeat 0px 0px; }
+
+#white {
+  margin: 2px;
+  width: 16px;
+  height: 16px;
+  float: left;
+  background: url(./mastermind/score_pegs_controls.png) no-repeat 0px -16px; }
+
+.confirmButton {
+  color: #ff9900;
+  cursor: pointer; }

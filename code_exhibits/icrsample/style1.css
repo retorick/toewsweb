@@ -1,0 +1,128 @@
+/* body content is centered; however, the "content" element is a block, within which the text is justified. */
+body { font-family:arial, helvetica; font-size:8pt; color:#524D0A;}
+a, a.visited, a.active { color:#ff9900; font-weight:bold; text-decoration:none; }
+#content { width:650px; margin-left:10px; text-align:justify; }
+
+#greeting {
+    position:absolute;
+    top:20px;
+    left:300px;
+    width:350px;
+    height:12px;
+    text-align:right;
+    font-style:italic;
+}
+
+#selectstyle { 
+    position:absolute; 
+    top:50px; 
+    left:450px; 
+    width:200px; 
+    height:20px;
+    background-color:#A29E64; 
+    color:white;
+    text-align:right; 
+    margin-right:12px; 
+}
+    #selectstyle select { font-size:8pt; }
+
+#topnavHoriz { display:none; }
+
+#topnavVert { 
+    position:absolute; 
+    top:80px; 
+    left:450px; 
+    width:188px; 
+    line-height:10px; 
+    background-color:#A29E64; 
+    color:white;
+    padding-top:12px;
+    padding-bottom:12px;
+    text-align:right; 
+    padding-right:12px; 
+}
+    #topnavVert a { font-weight:bold; text-decoration:none; color:white; }
+    #topnavVert a.visited { color:white; }
+    #topnavVert a.active { color:white; }
+    #topnavVert a:hover { text-decoration:underline; }
+
+#bottomnav { 
+    display:none; 
+    padding-top:3px; 
+    border-top:1px black dotted; 
+    font-size:8pt; 
+}
+    #bottomnav a { text-decoration:none; color:#666666; }
+    #bottomnav a.visited { color:#999999; }
+    #bottomnav a.active { color:#999999; }
+    #bottomnav a:hover { text-decoration:underline; }
+
+h1 { margin-top:0px; margin-bottom:0px; height:16px; font-size:12pt; font-weight:bold; color:#58541E;}
+p,li { line-height:150%; padding-bottom:6px; }
+
+/* Identification page */
+#intro {
+    position:absolute;
+    top:20px;
+    left:20px;
+    width:400px;
+    height:150px;
+}
+
+/* Heritage page */
+#heritage {
+    position:absolute;
+    top:20px;
+    left:20px;
+    width:400px;
+    height:150px;
+}
+
+/* Tenets page */
+#research {
+    position:absolute;
+    top:20px;
+    left:20px;
+    width:400px;
+    height:150px;
+}
+    #research div.section { border-left:20px #CBC460 solid; padding-left:10px; }
+
+
+#philosophy {
+    position:absolute;
+    top:200px;
+    left:20px; 
+    width:400px;
+    height:250px;
+}
+    #philosophy div.section { border-left:20px #CBC460 solid; padding-left:10px; }
+
+
+#tenetsScientific {
+    position:absolute;
+    top:630px;
+    left:350px; 
+    width:300px;
+}
+    #tenetsScientific div.bulletsection { }
+
+#tenetsBiblical {
+    position:absolute;
+    top:630px;
+    left:20px;
+    width:300px;
+}
+    #tenetsBiblical div.bulletsection { }
+    #tenetsBiblical div.note { font-size:8pt; font-style: italic; }
+
+#final {
+    position:absolute;
+    top:200px;
+    left:450px;
+    width:200px;
+    background-color:#CBC460;
+    border-top:2px #ff9900 solid;
+}
+    #final p { margin:0px 10px 10px 10px; }
+

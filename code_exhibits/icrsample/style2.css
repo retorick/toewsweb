@@ -1,0 +1,75 @@
+/* body content is centered; however, the "content" element is a block, within which the text is justified. */
+body { font-family:garamond, times new roman; font-size:14px; text-align:center; }
+a, a.visited, a.active { color:#004080; text-decoration:none; }
+#content { margin-left:50px; margin-right:50px; text-align:justify; }
+
+#greeting { font-family:arial, helvetica; font-size:10pt; margin-left:50px; margin-right:50px; text-align:left; }
+
+#selectstyle { 
+    margin-left:50px; 
+    margin-right:50px; 
+    text-align:right; 
+    background-color:#cccccc; 
+    text-align:right; 
+    font-family:verdana; 
+    font-size:8pt; 
+}
+    #selectstyle select { font-size:8pt; }
+
+#topnavVert { display:none; }
+
+#topnavHoriz { margin-top:10px; margin-bottom:10px; padding-bottom:3px; border-bottom:1px black dotted; font-size:8pt; }
+    #topnavHoriz a { text-decoration:none; color:#666666; }
+    #topnavHoriz a.visited { color:#999999; }
+    #topnavHoriz a.active { color:#999999; }
+    #topnavHoriz a:hover { text-decoration:underline; }
+
+#bottomnav { padding-top:3px; border-top:1px black dotted; font-size:8pt; }
+    #bottomnav a { text-decoration:none; color:#666666; }
+    #bottomnav a.visited { color:#999999; }
+    #bottomnav a.active { color:#999999; }
+    #bottomnav a:hover { text-decoration:underline; }
+
+h1 { padding:2px 10px 2px 10px; margin-bottom:0px; background-color:#ABCBDC; border-top:1px #034E75 solid; font-size:16px; font-weight:bold; color:white;}
+p, li { line-height:150%; padding-bottom:6px; }
+
+/* Identification page */
+#intro {
+}
+
+/* Heritage page */
+#heritage {
+}
+    #heritage div.section { text-indent:25px; margin-top:0px; border-left:3px #dddddd solid; font-size:14px; font-family:garamond; times new roman; padding:10px 10px 0px 10px; background-color:#eeeeee; }
+
+/* Tenets page */
+#research {
+}
+    #reseach div.section { text-indent:25px; margin-top:0px; border-left:3px #dddddd solid; font-size:14px; font-family:garamond; times new roman; padding:10px 10px 0px 10px; background-color:#eeeeee; }
+
+#philosophy {
+}
+    #philosophy div.section { text-indent:25px; margin-top:0px; border-left:3px #dddddd solid; font-size:14px; font-family:garamond; times new roman; padding:10px 10px 0px 10px; background-color:#eeeeee; }
+
+#tenetsBiblical { width:48%; float:left; }
+    #tenetsBiblical div.bulletsection {
+        height:200px;
+        overflow:auto;
+        padding-right:5px;
+        font-size:14px;
+    }
+    #tenetsBiblical div.note { font-size:8pt; font-style: italic; }
+
+#tenetsScientific { width:48%; float:right; padding-bottom:20px; }
+    #tenetsScientific div.bulletsection {
+        height:200px;
+        overflow:auto;
+        padding-right:5px;
+        font-size:14px;
+    }
+
+#final {
+    border-top:2px gray solid;
+    clear:both;
+}
+    #final div.section { text-indent:25px; margin-top:0px; border-left:3px #dddddd solid; font-size:14px; font-family:garamond; times new roman; padding:10px 10px 0px 10px; background-color:#eeeeee; }
